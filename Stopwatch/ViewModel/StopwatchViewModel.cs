@@ -21,10 +21,10 @@ namespace Stopwatch.ViewModel
 
         private void OnTimeUpdated(object sender, EventArgs e)
         {
-            OnPropertyChanged(nameof(TimeElapsed));
+            OnPropertyChanged(nameof(StrTime));
         }
 
-        public string TimeElapsed => _stopwatchModel.TimeElapsed;
+        public string StrTime => _stopwatchModel.TimeElapsed;
 
         public void Start() => _stopwatchModel.Start();
 
