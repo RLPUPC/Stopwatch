@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Stopwatch.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,24 +21,28 @@ namespace Stopwatch
     /// </summary>
     public partial class MainWindow : Window
     {
+        private readonly StopwatchViewModel _stopWatchVM;
+
         public MainWindow()
         {
             InitializeComponent();
+            _stopWatchVM = new StopwatchViewModel();
+            DataContext = _stopWatchVM;
         }
 
         private void btnStart_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            _stopWatchVM.Start();
         }
 
         private void btnPause_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            _stopWatchVM.Pause();
         }
 
         private void btnStop_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            _stopWatchVM.Stop();
         }
     }
 }

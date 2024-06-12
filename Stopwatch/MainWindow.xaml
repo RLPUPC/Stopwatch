@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Stopwatch"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Stopwatch" Height="450" Width="800">
     <Grid Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}">
         <Button x:Name="btnStart" Content="Start" HorizontalAlignment="Left" Margin="97,299,0,0" VerticalAlignment="Top" Width="108" Height="42" Click="btnStart_Click" TextOptions.TextHintingMode="Animated"/>
         <Button x:Name="btnPause" Content="Pause" HorizontalAlignment="Left" Margin="344,299,0,0" VerticalAlignment="Top" Width="108" Height="42" Click="btnPause_Click"/>
         <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Left" Margin="600,299,0,0" VerticalAlignment="Top" Width="108" Height="42" Click="btnStop_Click"/>
-        <TextBox x:Name="txtDisplayTime" HorizontalAlignment="Left" Height="91" Margin="181,88,0,0" TextWrapping="Wrap" Text="00:00:00" VerticalAlignment="Top" Width="430" UndoLimit="103" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="48" BorderThickness="0" Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}"/>
+        <TextBlock HorizontalAlignment="Left" Margin="235,96,0,0" TextWrapping="Wrap" Text="{Binding TimeElapsed}" VerticalAlignment="Top" Height="100" Width="332" FontSize="48" IsHitTestVisible="False"/>
 
     </Grid>
 </Window>
